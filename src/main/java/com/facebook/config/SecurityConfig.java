@@ -23,9 +23,10 @@ public class SecurityConfig {
 	            
 	            // Define URL-based authorization rules
 	            .authorizeHttpRequests(auth -> auth
-	                .requestMatchers("/api/users/register", "/api/users/login",
-	                		"/api/users/getProfile/{userId}","/api/users/update/{id}",
-	                		"/api/users/delete/{id}","/api/users/search").permitAll() // Public endpoints
+	                .requestMatchers("/api/users/register", "/api/users/login","/api/posts/getPost/{id}",
+	                		"/api/users/getProfile/{userId}","/api/users/update/{id}","/api/posts/getAllPost",
+	                		"/api/posts/update/{id}","/api/posts/delete/{id}","/api/posts/search",
+	                		"/api/users/delete/{id}","/api/users/search","/api/posts/create").permitAll() // Public endpoints
 	                .anyRequest().authenticated() // Protect all other endpoints
 	            );
 
