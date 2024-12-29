@@ -31,3 +31,18 @@ D)  Logging: SLF4J with Logback.
 E)  Mapping: MapStruct for DTO <-> Entity transformations.
 
 F)  Authentication: JWT-based authentication.
+
+
+                                                  *******System Architecture**********
+Key Components:
+
+1) User Registration & Login:
+       Register: Create a new user with unique email and securely hashed passwords.
+       Login: Authenticate using email and password. Return a JWT token upon successful login.
+   
+3) User Profile CRUD:
+       Create: Happens during registration.
+       Read: Fetch user profile data.
+       Update: Allow users to update their profile information.
+       Delete: Remove user profile and associated data from the database.
+
