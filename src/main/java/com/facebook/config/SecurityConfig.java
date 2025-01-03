@@ -26,6 +26,9 @@ public class SecurityConfig {
 	                .requestMatchers("/api/users/register", "/api/users/login","/api/posts/getPost/{id}",
 	                		"/api/users/getProfile/{userId}","/api/users/update/{id}","/api/posts/getAllPost",
 	                		"/api/posts/update/{id}","/api/posts/delete/{id}","/api/posts/search",
+	                		"/api/notifications","/api/notifications/{id}",
+	                		"/api/friendships/requests","/api/friendships/{userId}","/api/friendships/remove/{id}",
+	                		"/api/friendships/request","/api/friendships/accept/{id}","/api/friendships/rejected/{id}",
 	                		"/api/users/delete/{id}","/api/users/search","/api/posts/create").permitAll() // Public endpoints
 	                .anyRequest().authenticated() // Protect all other endpoints
 	            );
